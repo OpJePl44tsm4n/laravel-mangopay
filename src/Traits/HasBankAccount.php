@@ -50,7 +50,7 @@ trait HasBankAccount
         return $bankAccounts;
     }
 
-    public function getMangopayBankAccount(int $bankAccountId): BankAccount
+    public function getMangopayBankAccount($bankAccountId): BankAccount
     {
         $mangopayUserId = $this->mangopayUserId();
         if (! $mangopayUserId) {
@@ -132,7 +132,7 @@ trait HasBankAccount
         return $mangopayMandate;
     }
 
-    public function getMangopayMandate(int $mandateId): Mandate
+    public function getMangopayMandate($mandateId): Mandate
     {
         $api = $this->mangopayApi();
 
@@ -149,7 +149,7 @@ trait HasBankAccount
         return $mangopayMandate;
     }
 
-    public function cancelMangopayMandate(int $mandateId): Mandate
+    public function cancelMangopayMandate($mandateId): Mandate
     {
         $mangopayUserId = $this->mangopayUserId();
         if (! $mangopayUserId) {
